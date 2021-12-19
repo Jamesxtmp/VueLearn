@@ -22,7 +22,7 @@
         <ul>
             <li v-for="({quote, author} , i) in quotes"> 
                 <span>{{i + 1}} {{ quote }}</span>
-                <blockquote>- {{ author }}</blockquote>
+                <blockquote v-if="author">- {{ author }}</blockquote>
             </li>
         </ul>
     </div>
