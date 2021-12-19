@@ -12,7 +12,10 @@
     <div id="AppVue">
         <h1>Frases de batman en Ingles</h1>
         <ul>
-            <li v-for="quote in quotes"> autor </li>
+            <li v-for="({quote, author} , i) in quotes"> 
+                <span>{{i + 1}} {{ quote }}</span>
+                <blockquote>- {{ author }}</blockquote>
+            </li>
         </ul>
     
     </div>
