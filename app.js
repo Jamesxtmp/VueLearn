@@ -10,6 +10,16 @@ const app = Vue.createApp({
             title: 'La programacion',
             autor: 'Jaime'
         }
+    },
+    methods: {
+        cambiarAutor(event){
+            console.log('Click', event)
+            this.autor = 'Jaime Malo'
+            this.capitalizar()
+        },
+        capitalizar(){
+            this.title = this.title.toUpperCase()
+        }
     }
 })
 app.mount('#AppVue')
