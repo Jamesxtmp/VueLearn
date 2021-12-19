@@ -10,10 +10,13 @@
 <body>
     
     <div id="AppVue">
-        <h1>Frases de batman en Ingles</h1>
-        <ul>
-            <li v-for="quote in quotes"> autor </li>
-        </ul>
+        <h1> {{ title }} </h1>
+        <p> {{ message }} </p>
+        <blockquote> {{ autor }} </blockquote>
+        <button v-on:click="cambiarAutor">Cambiar Autor</button>
+    
+    
+    
     
     </div>
     <script src="app.js"></script>
