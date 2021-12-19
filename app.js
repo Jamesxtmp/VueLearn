@@ -12,8 +12,19 @@ const app = Vue.createApp({
     data(){
         return{
             quotes: quotes,
+            newQuote: 'Hola Mundo'
         }
     },
+    methods: {
+        addQuote(e){
+            if(e.code == "Enter"){
+                console.log(e)
+                this.quotes.unshift({
+                    quote: this.newQuote
+                })
+            }
+        }
+    }
 
 
 })

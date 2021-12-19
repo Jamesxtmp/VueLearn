@@ -11,13 +11,20 @@
     
     <div id="AppVue">
         <h1>Frases de batman en Ingles</h1>
+        <p> {{newQuote}} </p>
+
+        <input
+          type="text"
+          v-model="newQuote"
+          v-on:keypress="addQuote">
+        <hr>
+
         <ul>
             <li v-for="({quote, author} , i) in quotes"> 
                 <span>{{i + 1}} {{ quote }}</span>
                 <blockquote>- {{ author }}</blockquote>
             </li>
         </ul>
-    
     </div>
     <script src="app.js"></script>
 </body>
